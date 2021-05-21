@@ -1,0 +1,27 @@
+{
+  "name": "gabriel-q-wang-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabriel-q-wang/personalWeb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabriel-q-wang/personalWeb/issues"
+  },
+  "homepage": "https://github.com/gabriel-q-wang/personalWeb#readme",
+  "devDependencies": {
+    "bower": "^1.8.8",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-browser": "^2.1.4",
+    "gulp-size": "^2.1.0",
+    "reactify": "^1.1.1"
+  }
+}

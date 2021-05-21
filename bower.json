@@ -1,0 +1,21 @@
+{
+  "name": "gabriel-q-wang-website",
+  "homepage": "https://github.com/gabriel-q-wang/personalWeb",
+  "authors": [
+    "Gabriel Wang gabriel.wang.business@gmail.com"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "react": "^15.1.0"
+  }
+}

@@ -1,0 +1,37 @@
+{% extends "personalbase.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename = 'css/home.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="wrapper scroll-wrapper">
+        <div class="top-text">
+            <p class="text-title desktop-view">Gabriel</p>
+            <p class="text-title desktop-view">Wang</p>
+            <p class="text-title mobile-view">Gabriel Wang</p>
+        </div>
+        <div class="middle-text">
+            <p class="text-content">Hey, I'm Gabriel Wang, but you can call me Gabe. I'm currently a master's student in
+                computer science, studying at Georgia Tech. This website is a mix of my profession portfolio and personal interests!
+                Hope you enjoy the content.</p>
+
+            <p class="text-content">You can find me on <a href="https://www.linkedin.com/in/gabriel-q-wang/">LinkedIn</a>,
+                or email me <a href="mailto:gabriel.wang.business@gmail.com?Subject=Hello%20Gabe%20-from-website" target="_top">here</a>.
+                More detailed contact info can be found on my <a href="https://drive.google.com/file/d/1Ehshl9HiMXjPaCQq_H5aGAB_FbQUZq5_/view?usp=sharing">resume</a>.
+            </p>
+
+            <p class="text-content">Gabe Wang</p>
+
+            <p class="text-content"><a href="about">For more about me, read on here.</a></p>
+
+            <br>
+        </div>
+    </div>
+</div>
+{% endblock %}
