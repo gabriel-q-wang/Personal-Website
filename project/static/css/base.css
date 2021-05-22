@@ -4,13 +4,13 @@ body {
 }
 
 .navbar-ref {
-  color: #808080;
+  color: #ffffff;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
 }
 
 .navbar-ul {
-    background-color: white;
+    background-color: #121212;
     display: flex;
     justify-content: flex-end;
     width: 100%;
@@ -24,13 +24,21 @@ body {
   width: 50%;
 }
 
+.side-img {
+  margin-top: 44px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 @media only screen and (max-width: 1094px) {
   .list-inline {
     width: 100%;
   }
 
   .navbar-ref {
-    color: #808080;
+    color: #ffffff;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
   }

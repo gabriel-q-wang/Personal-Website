@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link type="text/css" rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename = 'css/portfolio.css') }}">
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename = 'css/card.css') }}">
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename = 'css/chip.css') }}">
+{% endblock %}
+
+{% block body %}
+
+{% if tag is not none %}
+<div class="row">
+    <div class="md-chips md-chips-center col s2 offset-s5">
+        <div class="md-chip md-chip-hover">
+            <a class="md-chip-link" href="/portfolio">{{tag}}</a>
+            <div class="md-chip-remove"><a href="/portfolio" class="md-chip-remove-span">x</a></div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<div class="row cards-container">
+    {% for project in projects %}
+    {% include "card.html" %}
+    {% endfor %}
+</div>
+
+{% endblock %}
