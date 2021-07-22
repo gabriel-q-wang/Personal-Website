@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "professional/base.html" %}
 
 {% block head %}
 <link type="text/css" rel="stylesheet"
@@ -25,7 +25,7 @@
 
 <div class="row cards-container">
     {% for project in projects %}
-    {% include "card.html" %}
+    {% include "common/card.html" %}
     {% endfor %}
 </div>
 

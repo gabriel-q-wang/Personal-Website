@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "professional/base.html" %}
 
 {% block head %}
 <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename = 'css/project.css') }}">
@@ -69,7 +69,7 @@
 
             <div class="links">
                 {% if 'github' in project %}
-                <div><a class="github" href={{project['github']}}>Find on Github</a></div>
+                <div><a class="github" href={{project['github']}} target="_blank" rel="noopener noreferrer">Find on Github</a></div>
                 {% endif %}
             </div>
         </div>

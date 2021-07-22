@@ -8,11 +8,11 @@ app = Flask(__name__)
 #Professional side of the page
 @app.route("/")
 def homepage():
-    return render_template("home.html", title="HOME PAGE")
+    return render_template("professional/home.html", title="HOME PAGE")
 
 @app.route("/about")
 def about():
-    return render_template("about.html", title="about page")
+    return render_template("professional/about.html", title="about page")
 
 @app.route("/portfolio")
 def portfolio():
@@ -23,7 +23,7 @@ def portfolio():
     if tag is not None:
         data = [project for project in data if tag.lower() in [project_tag.lower() for project_tag in project['tags']]]
 
-    return render_template('portfolio.html', projects=data, tag=tag, title="portfolio page")
+    return render_template('professional/portfolio.html', projects=data, tag=tag, title="portfolio page")
 
 @app.route('/portfolio/<title>')
 def project(title):
@@ -32,7 +32,7 @@ def project(title):
     in_project = next((p for p in projects if p['link'] == title), None)
 
     if in_project is None:
-        return render_template('404.html'), 404
+        return render_template('common/404.html'), 404
     else:
         selected = in_project
 
@@ -41,34 +41,48 @@ def project(title):
         path = "projects"
         selected['description'] = io.open(get_static_file(
             'static/%s/%s/%s.html' % (path, selected['link'], selected['link'])), "r", encoding="utf-8").read()
-    return render_template('project.html', project=selected)
+    return render_template('professional/project.html', project=selected)
 
 
 
 @app.route("/research")
 def research():
-    return render_template("home.html", title="research page")
+    return render_template("professional/research/home.html", title="research page")
 
+@app.route("/research/labs")
+def labs():
+    return render_template("professional/research/labs.html", title="research labs")
+
+@app.route("/research/papers")
+def papers():
+    return render_template("professional/research/papers.html", title="research papers")
+
+@app.route("/research/summaries")
+def summaries():
+    return render_template("professional/research/summaries.html", title="research summaries")
+
+#########################################################
 # Personal Side of the page
+#########################################################
 @app.route("/personal")
 def personal():
-    return render_template("personalhome.html", title="personal page")
+    return render_template("personal/home.html", title="personal page")
 
 @app.route("/personal/blog")
 def blog():
-    return render_template("personalhome.html", title="blog page")
+    return render_template("personal/blog.html", title="blog page")
 
 @app.route("/personal/art")
 def art():
-    return render_template("personalhome.html", title="art page")
+    return render_template("personal/art.html", title="art page")
 
 @app.route("/personal/food")
 def food():
-    return render_template("personalhome.html", title="food page")
+    return render_template("personal/food.html", title="food page")
 
 @app.route("/personal/misc")
 def misc():
-    return render_template("personalhome.html", title="misc page")
+    return render_template("personal/misc.html", title="misc page")
 
 
 # Helper functions
@@ -88,7 +102,7 @@ def order_projects_by_weight(projects):
 # Error cases
 @app.errorhandler(404)
 def page_not_found(e):
-    return render_template('404.html'), 404
+    return render_template('common/404.html'), 404
 
 #TODO FileNotFoundErrors
 
