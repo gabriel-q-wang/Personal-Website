@@ -1,0 +1,61 @@
+{% extends "personal/base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename = 'css/personalhome.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="wrapper scroll-wrapper">
+        <img class="side-img" src="../static/images/bear.jpg">
+    </div>
+    <div class="wrapper scroll-wrapper">
+        <div class="top-text">
+            <p class="text-title desktop-view">After Hours</p>
+            <p class="text-title mobile-view">After Hours</p>
+        </div>
+        <div class="middle-text">
+            <p class="text-content">Hey, this is the personal side of the website where I'll post about some of my hobbies. If you're
+                interested in my professional life and work feel free to check it out <a href="/">here</a>.</p>
+
+            <p class="text-content">If this is where you wanted to be, welcome!
+            </p>
+
+            <p class="text-content">I like to think of myself as a jack of all trades, meaning
+                that I can do anything and everything, just badly. This means I like to pick up
+                various hobbies and activies that can help keep me entertained. The main consistent
+                hobbies that I'm decent at will probably have their own section, such as art, food, etc.
+                If I decide to dabble in anything else and do anything interesting I'll likely post in under Misc or
+                make a blog post about it.
+            </p>
+
+            <p class="text-content">Just for laughs I decided to write out a few things that I'm interested in, and they are
+                as follows. Main trend is that I just like to make things.
+                Note that this doesn't mean I'm good at them or even do them consistently. I just think they're neat.
+            </p>
+            <ol>
+                <li>Cooking & Baking</li>
+                <li>Weightlifting</li>
+                <li>Skateboarding & Longboarding</li>
+                <li>Drawing & Painting</li>
+                <li>Woodworking</li>
+                <li>Anime & Manga</li>
+                <li>Fishing</li>
+                <li>Rock Climbing</li>
+                <li>Hiking</li>
+                <li>Music</li>
+                <li>Magic Tricks</li>
+                <li>Knitting & Crocheting</li>
+                <li>Blacksmithing</li>
+                <li>Board Games</li>
+            </ol>
+
+            <br>
+        </div>
+    </div>
+</div>
+{% endblock %}
