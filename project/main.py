@@ -5,14 +5,35 @@ from flask import Flask, render_template, request, redirect, Response, send_file
 
 app = Flask(__name__)
 
+#########################################################
+# Helper functions
+#########################################################
+def get_static_file(path):
+    site_root = os.path.realpath(os.path.dirname(__file__))
+    return os.path.join(site_root, path)
+
+def get_static_json(path):
+    return json.load(open(get_static_file(path)))
+
+def order_projects_by_weight(projects):
+    try:
+        return int(projects['weight'])
+    except KeyError:
+        return 0
+
+def get_common_links():
+    return get_static_json("static/commonlinks.json")
+
+#########################################################
 #Professional side of the page
+#########################################################
 @app.route("/")
 def homepage():
-    return render_template("professional/home.html", title="HOME PAGE")
+    return render_template("professional/home.html", title="HOME PAGE", commonlinks=get_common_links())
 
 @app.route("/about")
 def about():
-    return render_template("professional/about.html", title="about page")
+    return render_template("professional/about.html", title="about page", commonlinks=get_common_links())
 
 @app.route("/portfolio")
 def portfolio():
@@ -23,7 +44,7 @@ def portfolio():
     if tag is not None:
         data = [project for project in data if tag.lower() in [project_tag.lower() for project_tag in project['tags']]]
 
-    return render_template('professional/portfolio.html', projects=data, tag=tag, title="portfolio page")
+    return render_template('professional/portfolio.html', projects=data, tag=tag, title="portfolio page", commonlinks=get_common_links())
 
 @app.route('/portfolio/<title>')
 def project(title):
@@ -41,70 +62,55 @@ def project(title):
         path = "projects"
         selected['description'] = io.open(get_static_file(
             'static/%s/%s/%s.html' % (path, selected['link'], selected['link'])), "r", encoding="utf-8").read()
-    return render_template('professional/project.html', project=selected)
+    return render_template('professional/project.html', project=selected, commonlinks=get_common_links())
 
 
 
 @app.route("/research")
 def research():
-    return render_template("professional/research/home.html", title="research page")
+    return render_template("professional/research/home.html", title="research page", commonlinks=get_common_links())
 
 @app.route("/research/labs")
 def labs():
-    return render_template("professional/research/labs.html", title="research labs")
+    return render_template("professional/research/labs.html", title="research labs", commonlinks=get_common_links())
 
 @app.route("/research/papers")
 def papers():
-    return render_template("professional/research/papers.html", title="research papers")
+    return render_template("professional/research/papers.html", title="research papers", commonlinks=get_common_links())
 
 @app.route("/research/summaries")
 def summaries():
-    return render_template("professional/research/summaries.html", title="research summaries")
+    return render_template("professional/research/summaries.html", title="research summaries", commonlinks=get_common_links())
 
 #########################################################
 # Personal Side of the page
 #########################################################
 @app.route("/personal")
 def personal():
-    return render_template("personal/home.html", title="personal page")
+    return render_template("personal/home.html", title="personal page", commonlinks=get_common_links())
 
 @app.route("/personal/blog")
 def blog():
-    return render_template("personal/blog.html", title="blog page")
+    return render_template("personal/blog.html", title="blog page", commonlinks=get_common_links())
 
 @app.route("/personal/art")
 def art():
-    return render_template("personal/art.html", title="art page")
+    return render_template("personal/art.html", title="art page", commonlinks=get_common_links())
 
 @app.route("/personal/food")
 def food():
-    return render_template("personal/food.html", title="food page")
+    return render_template("personal/food.html", title="food page", commonlinks=get_common_links())
 
 @app.route("/personal/misc")
 def misc():
-    return render_template("personal/misc.html", title="misc page")
+    return render_template("personal/misc.html", title="misc page", commonlinks=get_common_links())
 
-
-# Helper functions
-def get_static_file(path):
-    site_root = os.path.realpath(os.path.dirname(__file__))
-    return os.path.join(site_root, path)
-
-def get_static_json(path):
-    return json.load(open(get_static_file(path)))
-
-def order_projects_by_weight(projects):
-    try:
-        return int(projects['weight'])
-    except KeyError:
-        return 0
-
+#########################################################
 # Error cases
+#########################################################
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('common/404.html'), 404
-
-#TODO FileNotFoundErrors
 
 if __name__ == "__main__":
     app.run(debug=True)
