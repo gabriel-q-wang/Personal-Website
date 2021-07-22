@@ -15,11 +15,17 @@
             <p class="text-title desktop-view">Wang</p>
             <p class="text-title mobile-view">Gabriel Wang</p>
             <div class="social-icons">
-                <a target="_blank" href="https://github.com/gabriel-q-wang">
+                <a target="_blank" href={{commonlinks['github']}}>
                     <img class="title-logo" src="static/images/github.svg">
                 </a>
-                <a target="_blank" href="https://www.linkedin.com/in/gabriel-q-wang/">
+                <a target="_blank" href={{commonlinks['linkedin']}}>
                     <img class="title-logo" src="static/images/linkedin.svg">
+                </a>
+                <a target="_blank" href={{commonlinks['email']}}>
+                    <img class="title-logo" src="static/images/email.svg">
+                </a>
+                <a target="_blank" href={{commonlinks['resume']}}>
+                    <img class="title-logo" src="static/images/resume.svg">
                 </a>
             </div>
         </div>
@@ -30,9 +36,9 @@
                 computer science, studying at Georgia Tech. This website is a mix of my profession portfolio and personal interests!
                 Hope you enjoy the content.</p>
 
-            <p class="text-content">You can find me on <a href="https://www.linkedin.com/in/gabriel-q-wang/" target="_blank" rel="noopener">LinkedIn</a>,
-                or email me <a href="mailto:gabriel.wang.business@gmail.com?Subject=Hello%20Gabe" target="_blank" rel="noopener">here</a>.
-                More detailed contact info can be found on my <a href="https://drive.google.com/file/d/1Ehshl9HiMXjPaCQq_H5aGAB_FbQUZq5_/view?usp=sharing" target="_blank" rel="noopener noreferrer">resume</a>.
+            <p class="text-content">You can find me on <a href={{commonlinks['linkedin']}} target="_blank" rel="noopener">LinkedIn</a>,
+                or email me <a href={{commonlinks['email']}} target="_blank" rel="noopener">here</a>.
+                More detailed contact info can be found on my <a href={{commonlinks['resume']}} target="_blank" rel="noopener noreferrer">resume</a>.
             </p>
 
             <p class="text-content"><a href="about">For more about me, read on here.</a></p>
