@@ -22,6 +22,14 @@
     "gulp": "^3.9.1",
     "gulp-browser": "^2.1.4",
     "gulp-size": "^2.1.0",
-    "reactify": "^1.1.1"
+    "reactify": "^1.1.1",
+    "bl": ">=1.2.3",
+    "minimist": ">=1.2.3",
+    "kind-of": ">=6.0.3",
+    "lodash": ">=4.17.21",
+    "lodash.template": ">=4.5.0",
+    "tunnel-agent": ">=0.6.0",
+    "cryptiles": ">=4.1.2",
+    "hoek": ">=4.2.1"
   }
 }
