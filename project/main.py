@@ -17,7 +17,8 @@ def about():
 @app.route("/portfolio")
 def portfolio():
     data = get_static_json("static/projects/projects.json")['projects']
-    data.sort(key=order_projects_by_weight, reverse=True)
+    data.sort(key=order_projects_by_weight)
+    data = [proj for proj in data if proj['weight'] >= 0]
 
     tag = request.args.get('tags')
     if tag is not None:
@@ -97,7 +98,7 @@ def order_projects_by_weight(projects):
     try:
         return int(projects['weight'])
     except KeyError:
-        return 0
+        return -1
 
 # Error cases
 @app.errorhandler(404)

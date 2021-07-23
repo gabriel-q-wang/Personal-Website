@@ -6,7 +6,7 @@
       "date": "May 2021 - Ongoing",
       "short": "Test",
       "status": "Ongoing",
-      "weight": 1,
+      "weight": -1,
       "tags": [
         "Media"
       ],
@@ -15,6 +15,106 @@
       ],
       "videos": [],
       "github": "https://github.com/gabriel-q-wang"
+    },
+    {
+      "name": "Approximation Algorithm Comparisons",
+      "link": "approx-algo",
+      "date": "August 2020 - August 2021",
+      "short": "Test",
+      "status": "Complete",
+      "weight": 3,
+      "tags": [
+        "Optimization", "Genetic Algorithms", "Algorithms", "Python", "Graphs"
+      ],
+      "photos": [
+        "/static/projects/approx-algo/graph.jpg"
+      ],
+      "videos": [],
+      "github": "https://github.com/gabriel-q-wang/Approximation-Algorithms"
+    },
+    {
+      "name": "Unsupervised Image Classification",
+      "link": "img-class",
+      "date": "August 2020 - August 2021",
+      "short": "Test",
+      "status": "Complete",
+      "weight": 2,
+      "tags": [
+        "Machine Learning", "Deep Learning", "Pytorch", "Python", "Computer Vision",
+        "Image Classification", "Unsupervised Learning", "Clustering", "Neural Network"
+      ],
+      "photos": [
+        "/static/projects/img-class/img-1.jpg"
+      ],
+      "videos": [],
+      "github": "https://github.com/gabriel-q-wang/Unsupervised-Image-Classification"
+    },
+    {
+      "name": "Social Media Data Mining",
+      "link": "data-mine",
+      "date": "August 2018 - August 2021",
+      "short": "Test",
+      "status": "Complete",
+      "weight": 5,
+      "tags": [
+        "Machine Learning", "Sentiment Analysis", "sklearn", "Python", "Classification"
+      ],
+      "photos": [
+        "/static/projects/data-mine/twitter.jpg"
+      ],
+      "videos": [],
+      "github": "https://github.com/gabriel-q-wang/Social-Media-Data-Mining"
+    },
+    {
+      "name": "Hateful Meme Classification",
+      "link": "meme",
+      "date": "January 2021 - August 2021",
+      "short": "Test",
+      "status": "Complete",
+      "weight": 1,
+      "tags": [
+        "Machine Learning", "Deep Learning", "Pytorch", "Transformers", "Python",
+        "Natural Language Processing", "Image Processing", "Computer Vision", "Multi-modal",
+        "Neural Network", "Feature Extraction"
+      ],
+      "photos": [
+        "/static/projects/meme/meme.jpg"
+      ],
+      "videos": [],
+      "github": "https://github.com/gabriel-q-wang/Hateful-Meme-Classification"
+    },
+    {
+      "name": "Alexa Freestyle",
+      "link": "alexa",
+      "date": "October 2020 - August 2021",
+      "short": "Test",
+      "status": "Complete",
+      "weight": 4,
+      "tags": [
+        "Machine Learning", "Deep Learning", "Tensorflow", "LSTM", "RNN", "Neural Network", "Python",
+        "Natural Language Processing", "Natural Language Generation"
+      ],
+      "photos": [
+        "/static/projects/alexa/alexa.jpg"
+      ],
+      "videos": [],
+      "github": "https://github.com/gabriel-q-wang/Alexa-Freestyle"
+    },
+    {
+      "name": "Space Traders",
+      "link": "space-traders",
+      "date": "January 2019 - August 2021",
+      "short": "Test",
+      "status": "Complete",
+      "weight": 6,
+      "tags": [
+        "Android", "Java", "Mobile", "App", "Game", "Music"
+      ],
+      "photos": [
+        "/static/projects/space-traders/img-1.jpg"
+      ],
+      "videos": [],
+      "github": "https://github.com/gabriel-q-wang/Space-Traders"
     }
   ]
 }
