@@ -4,7 +4,6 @@
       "name": "Sample",
       "link": "sample",
       "short": "Test",
-      "status": "Ongoing",
       "weight": -1,
       "tags": [
         "Media"
@@ -19,7 +18,6 @@
       "name": "Approximation Algorithm Comparisons",
       "link": "approx-algo",
       "short": "Test",
-      "status": "Complete",
       "weight": 3,
       "tags": [
         "Optimization", "Genetic Algorithms", "Algorithms", "Python", "Graphs"
@@ -34,7 +32,6 @@
       "name": "Unsupervised Image Classification",
       "link": "img-class",
       "short": "Test",
-      "status": "Complete",
       "weight": 2,
       "tags": [
         "Machine Learning", "Deep Learning", "Pytorch", "Python", "Computer Vision",
@@ -50,7 +47,6 @@
       "name": "Social Media Data Mining",
       "link": "data-mine",
       "short": "Test",
-      "status": "Complete",
       "weight": 5,
       "tags": [
         "Machine Learning", "Sentiment Analysis", "sklearn", "Python", "Classification"
@@ -64,8 +60,7 @@
     {
       "name": "Hateful Meme Classification",
       "link": "meme",
-      "short": "Test",
-      "status": "Complete",
+      "short": "Testaaa aaa aaa aaaaaaa  aaaaaa aaaaaa aaaaa aaaaaaa aaaaaa aaaaa aaaaa aa aaaaaaa aaa aaaa aaaaaaa a aaaa aaaaa Testaaa aaa aaa aaaaaaa  aaaaaa aaaaaa aaaaa aaaaaaa aaaaaa aaaaa aaaaa aa aaaaaaa aaa aaaa aaaaaaa a aaaa aaaaa Testaaa aaa aaa aaaaaaa  aaaaaa aaaaaa aaaaa aaaaaaa aaaaaa aaaaa aaaaa aa aaaaaaa aaa aaaa aaaaaaa a aaaa aaaaa Testaaa aaa aaa aaaaaaa  aaaaaa aaaaaa aaaaa aaaaaaa aaaaaa aaaaa aaaaa aa aaaaaaa aaa aaaa aaaaaaa a aaaa aaaaa Testaaa aaa aaa aaaaaaa  aaaaaa aaaaaa aaaaa aaaaaaa aaaaaa aaaaa aaaaa aa aaaaaaa aaa aaaa aaaaaaa a aaaa aaaaa Testaaa aaa aaa aaaaaaa  aaaaaa aaaaaa aaaaa aaaaaaa aaaaaa aaaaa aaaaa aa aaaaaaa aaa aaaa aaaaaaa a aaaa aaaaa Testaaa aaa aaa aaaaaaa  aaaaaa aaaaaa aaaaa aaaaaaa aaaaaa aaaaa aaaaa aa aaaaaaa aaa aaaa aaaaaaa a aaaa aaaaa",
       "weight": 1,
       "tags": [
         "Machine Learning", "Deep Learning", "Pytorch", "Transformers", "Python",
@@ -82,7 +77,6 @@
       "name": "Alexa Freestyle",
       "link": "alexa",
       "short": "Test",
-      "status": "Complete",
       "weight": 4,
       "tags": [
         "Machine Learning", "Deep Learning", "Tensorflow", "LSTM", "RNN", "Neural Network", "Python",
@@ -98,7 +92,6 @@
       "name": "Space Traders",
       "link": "space-traders",
       "short": "Test",
-      "status": "Complete",
       "weight": 6,
       "tags": [
         "Android", "Java", "Mobile", "App", "Game", "Music"
