@@ -62,6 +62,7 @@
 
 
 .card-title {
+font-family: 'Open Sans', sans-serif;
 overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -75,6 +76,7 @@ overflow: hidden;
   overflow: hidden;
   white-space: normal;
   text-overflow: unset;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .card-text-back {
@@ -86,6 +88,7 @@ overflow: hidden;
   overflow-x: hidden;
   word-wrap: normal;
   white-space: normal;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .container-outer {

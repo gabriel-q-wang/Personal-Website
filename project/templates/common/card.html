@@ -13,7 +13,7 @@
                         <div class="container-inner">
                             {% for tag in project['tags'] %}
                             <div class="md-chip md-chip-clickable"><a class="md-chip-link"
-                                                                    href="/portfolio?tags={{tag}}">{{tag}}</a>
+                                                                    href="/{{section}}?tags={{tag}}">{{tag}}</a>
                             </div>
                             {% endfor %}
                         </div>
@@ -24,7 +24,7 @@
                         </span>
                     </div>
                     <div class="container-outer">
-                        <span><a href="/portfolio/{{project['link']}}">Read More</a></span>
+                        <span><a href="/{{section}}/{{project['link']}}">Read More</a></span>
                         {% if 'github' in project %}
                         <span><a class="github" href={{project['github']}} target="_blank" rel="noopener noreferrer"> | Github</a></span>
                         {% endif %}
@@ -34,7 +34,7 @@
             <div class="card__face card__face--back">
                 <div class="card-title-back">{{project['name']}}</div>
                 <div class="card-text-back">{{project['short']}}</div>
-                <div><a href="/portfolio/{{project['link']}}">Read More</a></div>
+                <div><a href="/{{section}}/{{project['link']}}">Read More</a></div>
             </div>
         </div>
     </div>

@@ -11,7 +11,6 @@
       "photos": [
         "/static/projects/sample/img-1.jpg"
       ],
-      "videos": [],
       "github": "https://github.com/gabriel-q-wang"
     },
     {
@@ -25,7 +24,6 @@
       "photos": [
         "/static/projects/approx-algo/graph.jpg"
       ],
-      "videos": [],
       "github": "https://github.com/gabriel-q-wang/Approximation-Algorithms"
     },
     {
@@ -40,7 +38,6 @@
       "photos": [
         "/static/projects/img-class/img-1.jpg"
       ],
-      "videos": [],
       "github": "https://github.com/gabriel-q-wang/Unsupervised-Image-Classification"
     },
     {
@@ -54,7 +51,6 @@
       "photos": [
         "/static/projects/data-mine/twitter.jpg"
       ],
-      "videos": [],
       "github": "https://github.com/gabriel-q-wang/Social-Media-Data-Mining"
     },
     {
@@ -70,7 +66,6 @@
       "photos": [
         "/static/projects/meme/meme.jpg"
       ],
-      "videos": [],
       "github": "https://github.com/gabriel-q-wang/Hateful-Meme-Classification"
     },
     {
@@ -85,7 +80,6 @@
       "photos": [
         "/static/projects/alexa/alexa.jpg"
       ],
-      "videos": [],
       "github": "https://github.com/gabriel-q-wang/Alexa-Freestyle"
     },
     {
@@ -99,7 +93,6 @@
       "photos": [
         "/static/projects/space-traders/img-1.jpg"
       ],
-      "videos": [],
       "github": "https://github.com/gabriel-q-wang/Space-Traders"
     }
   ]

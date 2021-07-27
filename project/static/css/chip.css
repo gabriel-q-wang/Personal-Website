@@ -27,7 +27,7 @@
 .md-chip-icon {
   display: block;
   float: left;
-  background: #009587;
+  background: white;
   width: 32px;
   border-radius: 50%;
   text-align: center;
@@ -44,6 +44,7 @@
 
 .md-chip-link{
   color: #555;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .md-chip-link:hover {
