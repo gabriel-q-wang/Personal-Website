@@ -16,7 +16,7 @@
     {
       "name": "Approximation Algorithm Comparisons",
       "link": "approx-algo",
-      "short": "Test",
+      "short": "A report and comparison on various approximation algorithms for solving the minimum vertex cover problem.",
       "weight": 3,
       "tags": [
         "Optimization", "Genetic Algorithms", "Algorithms", "Python", "Graphs"
@@ -29,21 +29,21 @@
     {
       "name": "Unsupervised Image Classification",
       "link": "img-class",
-      "short": "Test",
+      "short": "An exploration and comparison of traditional image classifications tasks compared with novel unsupervised image classification models.",
       "weight": 2,
       "tags": [
         "Machine Learning", "Deep Learning", "Pytorch", "Python", "Computer Vision",
         "Image Classification", "Unsupervised Learning", "Clustering", "Neural Network"
       ],
       "photos": [
-        "/static/projects/img-class/img-1.jpg"
+        "/static/projects/img-class/cifar.png"
       ],
       "github": "https://github.com/gabriel-q-wang/Unsupervised-Image-Classification"
     },
     {
       "name": "Social Media Data Mining",
       "link": "data-mine",
-      "short": "Test",
+      "short": "A simple example of social media data mining and sentiment analysis using Twitter APIs, Google Trends, and Machine Learning.",
       "weight": 5,
       "tags": [
         "Machine Learning", "Sentiment Analysis", "sklearn", "Python", "Classification"
@@ -56,7 +56,7 @@
     {
       "name": "Hateful Meme Classification",
       "link": "meme",
-      "short": "Testaaa aaa aaa aaaaaaa  aaaaaa aaaaaa aaaaa aaaaaaa aaaaaa aaaaa aaaaa aa aaaaaaa aaa aaaa aaaaaaa a aaaa aaaaa Testaaa aaa aaa aaaaaaa  aaaaaa aaaaaa aaaaa aaaaaaa aaaaaa aaaaa aaaaa aa aaaaaaa aaa aaaa aaaaaaa a aaaa aaaaa Testaaa aaa aaa aaaaaaa  aaaaaa aaaaaa aaaaa aaaaaaa aaaaaa aaaaa aaaaa aa aaaaaaa aaa aaaa aaaaaaa a aaaa aaaaa Testaaa aaa aaa aaaaaaa  aaaaaa aaaaaa aaaaa aaaaaaa aaaaaa aaaaa aaaaa aa aaaaaaa aaa aaaa aaaaaaa a aaaa aaaaa Testaaa aaa aaa aaaaaaa  aaaaaa aaaaaa aaaaa aaaaaaa aaaaaa aaaaa aaaaa aa aaaaaaa aaa aaaa aaaaaaa a aaaa aaaaa Testaaa aaa aaa aaaaaaa  aaaaaa aaaaaa aaaaa aaaaaaa aaaaaa aaaaa aaaaa aa aaaaaaa aaa aaaa aaaaaaa a aaaa aaaaa Testaaa aaa aaa aaaaaaa  aaaaaa aaaaaa aaaaa aaaaaaa aaaaaa aaaaa aaaaa aa aaaaaaa aaa aaaa aaaaaaa a aaaa aaaaa",
+      "short": "A comparison of text transformers used for the multimodal problem of hateful meme classification and feature extraction.",
       "weight": 1,
       "tags": [
         "Machine Learning", "Deep Learning", "Pytorch", "Transformers", "Python",
@@ -71,7 +71,7 @@
     {
       "name": "Alexa Freestyle",
       "link": "alexa",
-      "short": "Test",
+      "short": "A new Alexa skill that uses machine learning to generate new lyrics based on your favorite artist!",
       "weight": 4,
       "tags": [
         "Machine Learning", "Deep Learning", "Tensorflow", "LSTM", "RNN", "Neural Network", "Python",
@@ -85,13 +85,13 @@
     {
       "name": "Space Traders",
       "link": "space-traders",
-      "short": "Test",
+      "short": "A fun simple game made using Android.",
       "weight": 6,
       "tags": [
         "Android", "Java", "Mobile", "App", "Game", "Music"
       ],
       "photos": [
-        "/static/projects/space-traders/img-1.jpg"
+        "/static/projects/space-traders/spacetraders.png"
       ],
       "github": "https://github.com/gabriel-q-wang/Space-Traders"
     }

@@ -92,10 +92,10 @@ overflow: hidden;
 }
 
 .container-outer {
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .container-inner {
   white-space: nowrap;
-  overflow: scroll;
+  overflow: hidden;
 }
