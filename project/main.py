@@ -63,7 +63,7 @@ def project(title):
         path = "projects"
         selected['description'] = io.open(get_static_file(
             'static/%s/%s/%s.html' % (path, selected['link'], selected['link'])), "r", encoding="utf-8").read()
-    return render_template('common/project.html', base='professional/base.html', project=selected, path='portfolio/', commonlinks=get_common_links())
+    return render_template('common/project.html', base='professional/base.html', project=selected, path='portfolio', commonlinks=get_common_links())
 
 
 
@@ -118,7 +118,7 @@ def blog_post(title):
         path = "blog"
         selected['description'] = io.open(get_static_file(
             'static/%s/%s/%s.html' % (path, selected['link'], selected['link'])), "r", encoding="utf-8").read()
-    return render_template('common/project.html', base='personal/base.html', project=selected, path='personal/blog/')
+    return render_template('common/project.html', base='personal/base.html', project=selected, path='blog')
 
 @app.route("/personal/art")
 def art():
@@ -148,7 +148,7 @@ def art_post(title):
         path = "art"
         selected['description'] = io.open(get_static_file(
             'static/%s/%s/%s.html' % (path, selected['link'], selected['link'])), "r", encoding="utf-8").read()
-    return render_template('common/project.html', base='personal/base.html', project=selected, path='personal/art/')
+    return render_template('common/project.html', base='personal/base.html', project=selected, path='art')
 
 @app.route("/personal/food")
 def food():
@@ -178,7 +178,7 @@ def food_post(title):
         path = "food"
         selected['description'] = io.open(get_static_file(
             'static/%s/%s/%s.html' % (path, selected['link'], selected['link'])), "r", encoding="utf-8").read()
-    return render_template('common/project.html', base='personal/base.html', project=selected, path='personal/food/')
+    return render_template('common/project.html', base='personal/base.html', project=selected, path='food')
 
 @app.route("/personal/misc")
 def misc():
@@ -208,7 +208,7 @@ def misc_post(title):
         path = "misc"
         selected['description'] = io.open(get_static_file(
             'static/%s/%s/%s.html' % (path, selected['link'], selected['link'])), "r", encoding="utf-8").read()
-    return render_template('common/project.html', base='personal/base.html', project=selected, path='personal/misc/')
+    return render_template('common/project.html', base='personal/base.html', project=selected, path='misc')
 
 
 #########################################################
