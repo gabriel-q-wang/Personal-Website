@@ -1,0 +1,16 @@
+{
+  "food": [
+    {
+      "name": "Sample",
+      "link": "sample",
+      "short": "Test",
+      "weight": 1,
+      "tags": [
+        "Media"
+      ],
+      "photos": [
+        "/static/projects/sample/img-1.jpg"
+      ]
+    }
+  ]
+}

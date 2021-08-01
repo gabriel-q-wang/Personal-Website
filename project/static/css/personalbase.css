@@ -47,10 +47,10 @@ body {
 
 a::selection,
 span::selection {
-  background: #ffb7b7; /* WebKit/Blink Browsers */
+  background: white; /* WebKit/Blink Browsers */
 }
 
 a::selection,
 span::-moz-selection {
-  background: #ffb7b7; /* Gecko Browsers */
+  background: white; /* Gecko Browsers */
 }

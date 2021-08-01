@@ -38,13 +38,14 @@ def about():
 @app.route("/portfolio")
 def portfolio():
     data = get_static_json("static/projects/projects.json")['projects']
-    data.sort(key=order_projects_by_weight, reverse=True)
+    data.sort(key=order_projects_by_weight)
+    data = [proj for proj in data if proj['weight'] >= 0]
 
     tag = request.args.get('tags')
     if tag is not None:
         data = [project for project in data if tag.lower() in [project_tag.lower() for project_tag in project['tags']]]
 
-    return render_template('professional/portfolio.html', projects=data, tag=tag, title="portfolio page", commonlinks=get_common_links())
+    return render_template('professional/portfolio.html', projects=data, tag=tag, title="portfolio page", commonlinks=get_common_links(), section='portfolio')
 
 @app.route('/portfolio/<title>')
 def project(title):
@@ -62,7 +63,7 @@ def project(title):
         path = "projects"
         selected['description'] = io.open(get_static_file(
             'static/%s/%s/%s.html' % (path, selected['link'], selected['link'])), "r", encoding="utf-8").read()
-    return render_template('professional/project.html', project=selected, commonlinks=get_common_links())
+    return render_template('common/project.html', base='professional/base.html', project=selected, path='portfolio', commonlinks=get_common_links())
 
 
 
@@ -91,19 +92,124 @@ def personal():
 
 @app.route("/personal/blog")
 def blog():
-    return render_template("personal/blog.html", title="blog page", commonlinks=get_common_links())
+    data = get_static_json("static/blog/blog.json")['blog']
+    data.sort(key=order_projects_by_weight)
+    data = [proj for proj in data if proj['weight'] >= 0]
+
+    tag = request.args.get('tags')
+    if tag is not None:
+        data = [project for project in data if tag.lower() in [project_tag.lower() for project_tag in project['tags']]]
+
+    return render_template("personal/blog.html", title="blog page", projects=data, tag=tag, section='personal/blog')
+
+@app.route('/personal/blog/<title>')
+def blog_post(title):
+    projects = get_static_json("static/blog/blog.json")['blog']
+
+    in_project = next((p for p in projects if p['link'] == title), None)
+
+    if in_project is None:
+        return render_template('common/404.html'), 404
+    else:
+        selected = in_project
+
+    # load html if the json file doesn't contain a description
+    if 'description' not in selected:
+        path = "blog"
+        selected['description'] = io.open(get_static_file(
+            'static/%s/%s/%s.html' % (path, selected['link'], selected['link'])), "r", encoding="utf-8").read()
+    return render_template('common/project.html', base='personal/base.html', project=selected, path='blog')
 
 @app.route("/personal/art")
 def art():
-    return render_template("personal/art.html", title="art page", commonlinks=get_common_links())
+    data = get_static_json("static/art/art.json")['art']
+    data.sort(key=order_projects_by_weight)
+    data = [proj for proj in data if proj['weight'] >= 0]
+
+    tag = request.args.get('tags')
+    if tag is not None:
+        data = [project for project in data if tag.lower() in [project_tag.lower() for project_tag in project['tags']]]
+
+    return render_template("personal/art.html", title="art page", projects=data, tag=tag, section='personal/art')
+
+@app.route('/personal/art/<title>')
+def art_post(title):
+    projects = get_static_json("static/art/art.json")['art']
+
+    in_project = next((p for p in projects if p['link'] == title), None)
+
+    if in_project is None:
+        return render_template('common/404.html'), 404
+    else:
+        selected = in_project
+
+    # load html if the json file doesn't contain a description
+    if 'description' not in selected:
+        path = "art"
+        selected['description'] = io.open(get_static_file(
+            'static/%s/%s/%s.html' % (path, selected['link'], selected['link'])), "r", encoding="utf-8").read()
+    return render_template('common/project.html', base='personal/base.html', project=selected, path='art')
 
 @app.route("/personal/food")
 def food():
-    return render_template("personal/food.html", title="food page", commonlinks=get_common_links())
+    data = get_static_json("static/food/food.json")['food']
+    data.sort(key=order_projects_by_weight)
+    data = [proj for proj in data if proj['weight'] >= 0]
+
+    tag = request.args.get('tags')
+    if tag is not None:
+        data = [project for project in data if tag.lower() in [project_tag.lower() for project_tag in project['tags']]]
+
+    return render_template("personal/food.html", title="food page", projects=data, tag=tag, section='personal/food')
+
+@app.route('/personal/food/<title>')
+def food_post(title):
+    projects = get_static_json("static/food/food.json")['food']
+
+    in_project = next((p for p in projects if p['link'] == title), None)
+
+    if in_project is None:
+        return render_template('common/404.html'), 404
+    else:
+        selected = in_project
+
+    # load html if the json file doesn't contain a description
+    if 'description' not in selected:
+        path = "food"
+        selected['description'] = io.open(get_static_file(
+            'static/%s/%s/%s.html' % (path, selected['link'], selected['link'])), "r", encoding="utf-8").read()
+    return render_template('common/project.html', base='personal/base.html', project=selected, path='food')
 
 @app.route("/personal/misc")
 def misc():
-    return render_template("personal/misc.html", title="misc page", commonlinks=get_common_links())
+    data = get_static_json("static/misc/misc.json")['misc']
+    data.sort(key=order_projects_by_weight)
+    data = [proj for proj in data if proj['weight'] >= 0]
+
+    tag = request.args.get('tags')
+    if tag is not None:
+        data = [project for project in data if tag.lower() in [project_tag.lower() for project_tag in project['tags']]]
+
+    return render_template("personal/misc.html", title="misc page", projects=data, tag=tag, section='personal/misc')
+
+@app.route('/personal/misc/<title>')
+def misc_post(title):
+    projects = get_static_json("static/misc/misc.json")['misc']
+
+    in_project = next((p for p in projects if p['link'] == title), None)
+
+    if in_project is None:
+        return render_template('common/404.html'), 404
+    else:
+        selected = in_project
+
+    # load html if the json file doesn't contain a description
+    if 'description' not in selected:
+        path = "misc"
+        selected['description'] = io.open(get_static_file(
+            'static/%s/%s/%s.html' % (path, selected['link'], selected['link'])), "r", encoding="utf-8").read()
+    return render_template('common/project.html', base='personal/base.html', project=selected, path='misc')
+
 
 #########################################################
 # Error cases
