@@ -24,7 +24,7 @@
     "gulp-size": "^2.1.0",
     "reactify": "^1.1.1",
     "bl": ">=1.2.3",
-    "minimist": ">=1.2.3",
+    "minimist": ">=1.2.6",
     "kind-of": ">=6.0.3",
     "lodash": ">=4.17.21",
     "lodash.template": ">=4.5.0",
